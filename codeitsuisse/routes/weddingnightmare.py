@@ -14,7 +14,7 @@ def evaluate_wedding():
     inputValue = request.get_json();
     result = wedding(inputValue)
     logging.info("My result :{}".format(result))
-    return jsonify(result);
+    return json.dumps(result);
 
 
 def wedding(wedding):
