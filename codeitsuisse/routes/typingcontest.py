@@ -52,6 +52,7 @@ def solution(sample_input):
     output = {"cost": 0, "steps": []}
 
     pathlist = []
+    outputcost=[]
     for i in sample_input:
         cost = len(i)
         # step.append([{"type": 'INPUT', "value": i}])
