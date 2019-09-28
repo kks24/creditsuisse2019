@@ -37,6 +37,8 @@ def Exponent(inputValue):
 
 	# LENGTH
 	length = math.ceil(log_start)
+	if (n == 10):
+		length += 1
 
 	output = dict()
 	output["result"] = [first_digit,length,last_digit]
