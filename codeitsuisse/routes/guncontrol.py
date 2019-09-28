@@ -95,7 +95,7 @@ def maxCombination(limit):
 			temp.append(found[index])
 
 	temp.reverse()
-	output["hit"]=temp
+	output["hits"]=temp
 	return (output)
 
 def NumToBinary(num,length):
