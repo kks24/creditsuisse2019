@@ -25,7 +25,9 @@ def Exponent(inputValue):
 
 	# LAST DIGIT
 	num = n % 10
-	last_digit = options[(p % len(options))]
+	options = trailingList[num]
+	p_mod = (p-1) % (len(options))
+	last_digit = options[p_mod]
 
 	# FIRST DIGIT
 	log_start = p * (math.log(n) / math.log(10))
