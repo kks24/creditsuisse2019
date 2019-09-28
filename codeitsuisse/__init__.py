@@ -5,3 +5,4 @@ import codeitsuisse.routes.guncontrol
 import codeitsuisse.routes.lottery
 import codeitsuisse.routes.exponent
 import codeitsuisse.routes.weddingnightmare
+import codeitsuisse.routes.typingcontest
