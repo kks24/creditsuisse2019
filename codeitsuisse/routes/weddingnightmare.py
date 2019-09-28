@@ -14,7 +14,7 @@ def evaluate_wedding():
     inputValue = request.get_json();
     result = wedding(inputValue)
     logging.info("My result :{}".format(result))
-    return json.dumps(result);
+    return jsonify(result);
 
 
 def wedding(wedding):
@@ -54,7 +54,7 @@ def wedding(wedding):
                 break
             for friendgroup in mainfriends:
                 if(all(x in friendgroup for x in enemiess)):
-                    outdict["satisfiable"] = false
+                    outdict["satisfiable"] = False
                     outdict["allocation"] = []
                     i=1
                     break
