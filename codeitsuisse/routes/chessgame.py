@@ -8,7 +8,7 @@ from codeitsuisse import app;
 logger = logging.getLogger(__name__)
 
 @app.route('/chessgame', methods=['POST'])
-def evaluate():
+def evaluate2():
     data = request.get_json();
     logging.info("data sent for evaluation {}".format(data))
     inputValue = request.get_json();
