@@ -97,7 +97,10 @@ def wedding(wedding):
                 if(slotinliao==0):
                     allocation.append([g])
             else:
-                allocation[0].append(g)
+                if len(allocation)>0:
+                    allocation[0].append(g)
+                else:
+                    allocation.append([g])
         
         #print(allocation)
         allocation1=[]
