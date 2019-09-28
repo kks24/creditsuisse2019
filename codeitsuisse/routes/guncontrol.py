@@ -17,7 +17,7 @@ def evaluate():
     inputValue = request.get_json();
     result = solution(inputValue)
     logging.info("My result :{}".format(result))
-    return json.dumps(result);
+    return jsonify(result);
 
 def solution(inputValue):
 	# Identify all paths
