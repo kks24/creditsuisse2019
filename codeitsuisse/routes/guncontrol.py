@@ -63,11 +63,11 @@ def recursion2(position,movement,grid,previous):
 
 	if (flag == False):
 		newDict = dict()
-		newDict["guns"] = movement
 		finalPosition = dict()
 		finalPosition["x"] = position[0]+1
 		finalPosition["y"] = position[1]+1
 		newDict["cell"] = finalPosition
+		newDict["guns"] = movement
 		found.append(newDict)
 
 def maxCombination(limit):
