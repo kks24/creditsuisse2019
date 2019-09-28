@@ -25,16 +25,17 @@ def Exponent(inputValue):
 
 	# LAST DIGIT
 	num = n % 10
-	multiple = p % len(trailingList[num-1])
+	multiple = (p-1) % len(trailingList[num-1])
 	last_digit = trailingList[num-1][multiple]
 
 	# FIRST DIGIT
 	log_start = p * (math.log(n) / math.log(10))
-	estimation = math.pow(10,log_start)
-	first_digit = int(str(estimation)[0])
+
+	first_digit = int(math.pow(10,log_start % 1))
+	print (first_digit)
 
 	# LENGTH
-	length = len(str(int(estimation)))
+	length = math.ceil(log_start)
 
 	output = dict()
 	output["result"] = [first_digit,length,last_digit]
