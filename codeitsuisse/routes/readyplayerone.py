@@ -20,7 +20,7 @@ def evaluate_readyp1():
 def play(sample_input):
     N=sample_input["maxChoosableInteger"]
     T=sample_input["desiredTotal"]
-    int(N)
+    N = int(N)
     Nlist=[x+1 for x in range(N)]
 
     path=[]
