@@ -35,7 +35,8 @@ def solution(reviews):
         words = create_word_features(words)
         outdict={}
         output["response"].append(classifier.classify(words))
-
+        print(classifier.classify(words))
+    
     return output
 
 def create_word_features(words):
