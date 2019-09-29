@@ -26,6 +26,11 @@ def play(sample_input):
 
     path=[]
     def calculate(Nlist,T):
+        if(len(Nlist)==1):
+            if T>1:
+                return {"res":-1}
+            if T==1:
+                return {"res":1}
         start=T%(Nlist[0]+Nlist[-1])
         Tleft=T-start
         length=len(Nlist)
