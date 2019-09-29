@@ -25,16 +25,26 @@ def play(sample_input):
     Nlist=[x+1 for x in range(N)]
 
     path=[]
-    sumstart=0
-    while(sumstart<T-(Nlist[-1]+Nlist[0])):
-        start=T%(Nlist[-1]+Nlist[0])
-        path.append(start)
-        Nlist.remove(start)
-        sumstart = sumstart+start
-
-    if(len(path)%2==0):
-        return -1
-    else:
-        path.append(Nlist[0])
-        path.append(Nlist[-1])
-        return {"res":len(path)}
+    def calculate(Nlist,T):
+        start=T%(Nlist[0]+Nlist[-1])
+        Tleft=T-start
+        length=len(Nlist)
+        if length//2!=length/2 and start==Nlist[(length+1)//2]:
+            return {"res":1+2*(Tleft/(Nlist[0]+Nlist[-1]))}
+        elif start in [Nlist[0],Nlist[-1]] and len(Nlist)>1:
+            if start == Nlist[0]:
+                Nlist=[x+1 for x in range(1,N)]
+            elif start == Nlist[-1]:
+                Nlist=[x+1 for x in range(N-1)]
+            ans=calculate(Nlist,Tleft)
+            if ans["res"]==-1:
+                return ans
+            else:
+                ans["res"]+=1
+                return ans
+        elif Tleft==sum([Nlist[0],Nlist[-1]]):
+            return {"res":3}
+        else:
+            return {"res":-1}
+                    
+    return calculate(Nlist,T)
