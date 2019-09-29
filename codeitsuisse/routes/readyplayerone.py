@@ -29,7 +29,7 @@ def play(sample_input):
         start=T%(Nlist[0]+Nlist[-1])
         Tleft=T-start
         length=len(Nlist)
-        if length//2!=length/2 and start==Nlist[(length+1)//2]:
+        if length//2!=length/2 and start==Nlist[(length)//2]:
             return {"res":1+2*(Tleft/(Nlist[0]+Nlist[-1]))}
         elif start in [Nlist[0],Nlist[-1]] and len(Nlist)>1:
             if start == Nlist[0]:
