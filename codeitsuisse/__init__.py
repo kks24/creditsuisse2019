@@ -6,3 +6,4 @@ import codeitsuisse.routes.lottery
 import codeitsuisse.routes.exponent
 import codeitsuisse.routes.weddingnightmare
 import codeitsuisse.routes.typingcontest
+import codeitsuisse.routes.readyplayerone
