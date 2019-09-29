@@ -7,3 +7,4 @@ import codeitsuisse.routes.exponent
 import codeitsuisse.routes.weddingnightmare
 import codeitsuisse.routes.typingcontest
 import codeitsuisse.routes.readyplayerone
+import codeitsuisse.routes.sentimentanalysis
