@@ -21,6 +21,7 @@ def play(sample_input):
     N=sample_input["maxChoosableInteger"]
     T=sample_input["desiredTotal"]
     N = int(N)
+    T = int(T)
     Nlist=[x+1 for x in range(N)]
 
     path=[]
